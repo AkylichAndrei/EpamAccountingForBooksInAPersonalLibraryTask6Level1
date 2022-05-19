@@ -27,13 +27,13 @@ public Books(String name, String author, String format, int year, String genre, 
 @Override
 public String toString() {
 		 return "{" +
-        " Название книги :'" + this.name  + "\r\n"+
-        " Автор :'" + this.author  + "\r\n"+
-        " Формат :'" + this.format  + "\r\n"+
-        " Год :'" + this.year  + "\r\n"+
-        " Жанр :'" + this.genre  + "\r\n"+
-        " Описание :'" + this.description  + "\r\n"+
-        " Расположение :'" + this.location  + "\r\n"+
+        " РќР°Р·РІР°РЅРёРµ РєРЅРёРіРё :'" + this.name  + "\r\n"+
+        " РђРІС‚РѕСЂ :'" + this.author  + "\r\n"+
+        " Р¤РѕСЂРјР°С‚ :'" + this.format  + "\r\n"+
+        " Р“РѕРґ :'" + this.year  + "\r\n"+
+        " Р–Р°РЅСЂ :'" + this.genre  + "\r\n"+
+        " РћРїРёСЃР°РЅРёРµ :'" + this.description  + "\r\n"+
+        " Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ :'" + this.location  + "\r\n"+
         '}';
 }
 public String search(String x2) {
@@ -43,14 +43,14 @@ public String search(String x2) {
 	return x;
 }
 public void delFile() throws Exception {
-	FileWriter nFile = new FileWriter("Books.txt", false); //значение False указывает на то,
-	//что файл будет перезаписываться
+	FileWriter nFile = new FileWriter("Books.txt", false); //Р·РЅР°С‡РµРЅРёРµ False СѓРєР°Р·С‹РІР°РµС‚ РЅР° С‚Рѕ,
+	//С‡С‚Рѕ С„Р°Р№Р» Р±СѓРґРµС‚ РїРµСЂРµР·Р°РїРёСЃС‹РІР°С‚СЊСЃСЏ
     nFile.write("");
     nFile.close();
 }
 public void add(String name, String author, String format, String year, String genre, String description, String location) throws Exception {
-	FileWriter nFile = new FileWriter("Books.txt", true); //значение true указывает на то,
-	//что файл будет дозаписываться
+	FileWriter nFile = new FileWriter("Books.txt", true); //Р·РЅР°С‡РµРЅРёРµ true СѓРєР°Р·С‹РІР°РµС‚ РЅР° С‚Рѕ,
+	//С‡С‚Рѕ С„Р°Р№Р» Р±СѓРґРµС‚ РґРѕР·Р°РїРёСЃС‹РІР°С‚СЊСЃСЏ
     nFile.write(name + System.lineSeparator());
     nFile.write(author + System.lineSeparator());
     nFile.write(format + System.lineSeparator());

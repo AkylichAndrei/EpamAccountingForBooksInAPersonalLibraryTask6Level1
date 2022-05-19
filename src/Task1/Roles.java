@@ -4,15 +4,15 @@ import java.io.FileReader;
 import java.util.Scanner;
 import java.io.FileWriter;
 
-public class Roles {//класс "Роли", родительский класс Пользователя и Администратора
+public class Roles {//РєР»Р°СЃСЃ "Р РѕР»Рё", СЂРѕРґРёС‚РµР»СЊСЃРєРёР№ РєР»Р°СЃСЃ РџРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рё РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°
 private String Name;
 private String login; 
 private String password;
 
 public Roles(){
 }
-public String search(String s1, String s2) throws Exception { // функция поиска и проверки пароля
-	//расположение файла C:\Users\Pc\eclipse-workspace\
+public String search(String s1, String s2) throws Exception { // С„СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° Рё РїСЂРѕРІРµСЂРєРё РїР°СЂРѕР»СЏ
+	//СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° C:\Users\Pc\eclipse-workspace\
 	String s3="", sc1="",sc2="";
 	boolean bol=false;
 	   FileReader fr = new FileReader( "Password.txt" );
@@ -24,20 +24,20 @@ public String search(String s1, String s2) throws Exception { // функция поиска 
 		   scan2.nextLine();
 		   if(s1.hashCode()==Integer.parseInt(sc1)&&s2.hashCode()==Integer.parseInt(sc2)) {
 			   bol=true;
-			   System.out.println("Вы успешно Авторизировались!");
+			   System.out.println("Р’С‹ СѓСЃРїРµС€РЅРѕ РђРІС‚РѕСЂРёР·РёСЂРѕРІР°Р»РёСЃСЊ!");
 		   }
 	   }
 	   if(bol==false) {
-		   System.out.println("Ошибка! Логин или пароль не совпали!");
+		   System.out.println("РћС€РёР±РєР°! Р›РѕРіРёРЅ РёР»Рё РїР°СЂРѕР»СЊ РЅРµ СЃРѕРІРїР°Р»Рё!");
 		   s3="0";
 	   }
 	   scan2.close();
 	   return s3;
 }
-//В Java hashCode() возвращает значение хэш-кода для данного объекта.
-public void  registration(String s1,String s2,String s3) throws Exception { //функция записи нового пользователя
-	FileWriter nFile = new FileWriter("Password.txt", true); //значение true указывает на то,
-	//что файл будет дозаписыываться
+//Р’ Java hashCode() РІРѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ С…СЌС€-РєРѕРґР° РґР»СЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°.
+public void  registration(String s1,String s2,String s3) throws Exception { //С„СѓРЅРєС†РёСЏ Р·Р°РїРёСЃРё РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	FileWriter nFile = new FileWriter("Password.txt", true); //Р·РЅР°С‡РµРЅРёРµ true СѓРєР°Р·С‹РІР°РµС‚ РЅР° С‚Рѕ,
+	//С‡С‚Рѕ С„Р°Р№Р» Р±СѓРґРµС‚ РґРѕР·Р°РїРёСЃС‹С‹РІР°С‚СЊСЃСЏ
     nFile.write(System.lineSeparator()+"2645995"+System.lineSeparator());
     nFile.write(s1.hashCode()+System.lineSeparator());
     nFile.write(s2.hashCode()+System.lineSeparator());
